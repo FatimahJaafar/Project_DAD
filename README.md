@@ -1,69 +1,45 @@
-## Description
-How many apps involved (anis)
-
-## Installation
-Brief explanation each apps (aziah)
-
-## Usage
-Architecture/Layer diagram for each of the apps including the middleware (sama2)
-
-## Contributing
-List of URL end points middleware RESTful/SOAP/Socket (sama2)
-
-## License
-Functions/Features in the middleware (aina)
-
-## Contact
-The database and tables involve in the projects (timh)
-
-
-
-
 # Project Name
 Meriah Candy Shop
 
 ## Applications Involved
+## Description
+How many apps involved (anis)
 
 ### 1. Application A (Anis)
 - **Description**: A brief explanation of what Application A does.
 
-### 2. Application B (Aziah)
+### 2. Application B (Anis)
 - **Description**: A brief explanation of what Application B does.
 
-### 3. Middleware (Aina)
-- **Description**: Explanation of the middleware and its role in connecting the applications.
+  ---
+
+## Installation
+Brief explanation each apps (aziah)
 
 ---
 
 ## Architecture/Layer Diagram
-
-### Application A
-
-### Application B
-### Midldleware
-
-
+Architecture/Layer diagram for each of the apps including the middleware (sama2)
 
 ---
 
-## URL Endpoints
-
-### Middleware RESTful/SOAP/Socket Endpoints
-Here is a list of URL endpoints for the middleware, supporting different communication protocols:
+## Contributing URL Endpoints Middleware RESTful/SOAP/Socket Endpoints
+List of URL end points middleware RESTful/SOAP/Socket (sama2)
 
 - **RESTful Endpoints**:
   - `GET /api/resource`: Description of the endpoint.
-  - `POST /api/resource`: Description of the endpoint.
+  - `POST /api/resource`: Description of the endpoint. (kita guna ni)
   - `PUT /api/resource`: Description of the endpoint.
   - `DELETE /api/resource`: Description of the endpoint.
-
-- **SOAP Endpoints**:
-  - `POST /soap/resource`: Description of the endpoint.
   
 - **Socket Endpoints**:
   - `ws://example.com/socket`: Description of the endpoint.
 
 ---
+
+### 3. Middleware (Aina)
+- **Description**: Explanation of the middleware and its role in connecting the applications.
+Functions/Features in the middleware
 
 ## Middleware Functions/Features
 
@@ -74,7 +50,7 @@ The middleware performs several key functions to facilitate communication and da
 - **Logging**: Logs important events and errors for monitoring and debugging.
 - **Caching**: Improves performance by caching frequent requests.
 - **Error Handling**: Manages errors and provides appropriate responses.
-
+- 
 ---
 
 ## Database
