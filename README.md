@@ -20,6 +20,7 @@ The database and tables involve in the projects (timh)
 
 
 # Project Name
+Meriah Candy Shop
 
 ## Applications Involved
 
@@ -76,35 +77,28 @@ The middleware performs several key functions to facilitate communication and da
 
 ---
 
-## Database and Tables
-
-### Databases Involved
-
-#### Database 1 (Timh)
-- **Description**: Details about Database 1 and its role in the project.
-  
-#### Database 2 (Timh)
-- **Description**: Details about Database 2 and its role in the project.
-
-### Tables
-
-#### Table 1
-- **Name**: `table1`
-- **Description**: Description of what this table stores.
-- **Columns**:
-  - `id`: Primary key, integer.
-  - `name`: Name of the entity, string.
-  - `created_at`: Timestamp when the record was created.
-
-#### Table 2
-- **Name**: `table2`
-- **Description**: Description of what this table stores.
-- **Columns**:
-  - `id`: Primary key, integer.
-  - `description`: Description of the entity, string.
-  - `updated_at`: Timestamp when the record was last updated.
-
----
+## Database
+#### Database Name : meriahcandy
+- **Description**: The table is designed to track customer orders, detailing what they ordered and the associated quantities and costs.
+- **Table Name** : `pesanan`
+- **SQL** :
+  CREATE TABLE pesanan
+(
+    OrderID INT PRIMARY KEY,
+    NameCust VARCHAR(55) NOT NULL,
+    Bento_Quantity INT NOT NULL,
+    Gum_Quantity INT NOT NULL,
+    Mom_Quantity INT NOT NULL,
+    Hitto_Quantity INT NOT NULL,
+    Total DOUBLE NOT NULL
+);
+- **Picture of the table**
+![Screenshot 2024-06-24 180315](https://github.com/FatimahJaafar/Project_DAD/assets/163825344/41b7c4fc-0ce3-4175-a6d3-35aa5eb97437)
+- **Description of SQL**: 
+  - OrderID: An integer column serving as the primary key, uniquely identifying each order.
+  - NameCust: A VARCHAR column (string) of maximum length 55, storing the customer's name.
+  - Bento_Quantity, Gum_Quantity, Mom_Quantity, Hitto_Quantity: These columns represent the quantities ordered for different items.
+  - Total: A DOUBLE column, presumably storing the total cost or price of the order.
 
 ## Contact
 
@@ -113,12 +107,4 @@ For more information, please contact:
 - **Anis**: [email@example.com]
 - **Aziah**: [email@example.com]
 - **Aina**: [email@example.com]
-- **Timh**: [email@example.com]
-
----
-
-## License
-
-This project is licensed under the [Your License Name].
-
-
+- **Fatimah**: [B032210140@student.edu.utem.my]
