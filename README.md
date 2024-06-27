@@ -41,7 +41,7 @@ List of URL end points middleware RESTful/SOAP/Socket (sama2)
 - **Description**: Explanation of the middleware and its role in connecting the applications.
 Functions/Features in the middleware
 
-## Middleware Functions/Features
+
 
 
 
