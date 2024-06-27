@@ -40,6 +40,41 @@ List of URL end points middleware RESTful/SOAP/Socket (sama2)
 ### 3. Middleware (Aina)
 - **Description**: Explanation of the middleware and its role in connecting the applications.
 Functions/Features in the middleware
+## Middleware Components
+
+### Socket Communication
+- **Customer Application**: 
+  - Sends order data to the Owner application via a socket connection.
+  - Data format: `NameCust;Bento_Quantity;Gum_Quantity;Mom_Quantity;Hitto_Quantity;Total`.
+- **Owner Application**: 
+  - Listens for incoming connections from the Customer application on port 88.
+  - Receives, parses, and processes order data.
+
+### HTTP Requests
+- **Owner Application**:
+  - Sends order data to the `orders.php` script to save the order in the database.
+  - Constructs an HTTP GET request with order data as query parameters.
+- **OrderHistoryView**:
+  - Fetches order history data from the `view_orders.php` script.
+  - Constructs an HTTP GET request and parses the JSON response.
+
+### PHP Scripts
+- **orders.php**:
+  - Receives order data via HTTP GET requests.
+  - Validates and inserts the order data into the `pesanan` table in the MySQL database.
+  - Returns a success or error message in JSON format.
+- **view_orders.php**:
+  - Retrieves order history data from the `pesanan` table.
+  - Returns the order data in JSON format.
+
+### Middleware Flow
+1. Customer places an order using the Customer application.
+2. Order data is sent via socket to the Owner application.
+3. Owner application receives the order data and sends it via HTTP request to `orders.php`.
+4. `orders.php` validates and stores the order in the database.
+5. Owner can view new orders in real-time, and past orders can be viewed via the OrderHistoryView.
+6. OrderHistoryView fetches order history data from `view_orders.php` and displays it.
+
 
 
 
