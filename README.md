@@ -43,15 +43,7 @@ Functions/Features in the middleware
 
 ## Middleware Functions/Features
 
-The middleware performs several key functions to facilitate communication and data processing between the applications:
 
-- **Authentication**: Handles user authentication and authorization.
-- **Data Transformation**: Transforms data between different formats required by the applications.
-- **Logging**: Logs important events and errors for monitoring and debugging.
-- **Caching**: Improves performance by caching frequent requests.
-- **Error Handling**: Manages errors and provides appropriate responses.
-- 
----
 
 ## Database
 #### Database Name : meriahcandy
