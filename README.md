@@ -29,7 +29,7 @@ Brief explanation each apps (aziah)
 ---
 
 ## Architecture/Layer Diagram
-Architecture/Layer diagram for each of the apps including the middleware (sama2)
+Architecture/Layer diagram for each of the apps including the middleware (aziah)
 
 ---
 
