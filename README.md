@@ -1,7 +1,7 @@
 # Project Name
 Distributed Meriah Candy Shop system
 -----
-## Applications Involved
+## 1. Applications Involved
 ## Description
 How many apps involved (anis)
 There are 4 applications involved in this project.
@@ -23,17 +23,17 @@ There are 4 applications involved in this project.
 
   ---
 
-## Installation
+## 2. Installation
 Brief explanation each apps (aziah)
 
 ---
 
-## Architecture/Layer Diagram
+## 3. Architecture/Layer Diagram
 Architecture/Layer diagram for each of the apps including the middleware (aziah)
 
 ---
 
-## Contributing URL Endpoints Middleware RESTful/Socket 
+## 4. Contributing URL Endpoints Middleware RESTful/Socket 
 List of URL end points middleware RESTful/SOAP/Socket (sama2)
 
 - **RESTful Endpoints**:
@@ -54,7 +54,7 @@ List of URL end points middleware RESTful/SOAP/Socket (sama2)
 - **URL:** `http://localhost/view_orders.php`
 - **Method:** `GET`
 
-## Socket Endpoint
+- **Socket Endpoints**:
 
 ### Customer to Owner
 
@@ -70,13 +70,13 @@ List of URL end points middleware RESTful/SOAP/Socket (sama2)
 
 ---
 
-### 3. Middleware (Aina)
+## 5. Middleware (Aina)
 - **Description**: Explanation of the middleware and its role in connecting the applications.
 Functions/Features in the middleware
-## Middleware Components
-## 1. Socket Communication
+### Middleware Components
+### 1. Socket Communication
 
-### Customer to Owner Communication
+#### Customer to Owner Communication
 The Customer application sends order details to the Owner application via socket communication.
 
 **Implementation:**
@@ -88,9 +88,9 @@ The Customer application sends order details to the Owner application via socket
   - A server socket listens on port `88` for incoming connections.
   - Upon receiving an order, the server processes the data and updates the order table in the Owner application's GUI.
 
-## 2. HTTP Requests
+### 2. HTTP Requests
 
-### Saving Orders to Database
+#### Saving Orders to Database
 The middleware facilitates saving order details to a MySQL database through HTTP GET requests.
 
 **Implementation:**
@@ -103,7 +103,7 @@ The middleware facilitates saving order details to a MySQL database through HTTP
   - Inserts the order details into the `pesanan` table.
   - Returns a JSON response indicating success or failure.
 
-### Order History View
+#### Order History View
 The Owner application includes a feature to view the order history.
 
 **Implementation:**
@@ -115,9 +115,9 @@ The Owner application includes a feature to view the order history.
   - Returns the order data in JSON format.
   - The `OrderHistoryView` parses this JSON data and updates the table to display all past orders.
 
-## 3. Data Validation
+### 3. Data Validation
 
-### Input Validation in Customer Application
+#### Input Validation in Customer Application
 Ensures that all user inputs are valid before processing the order.
 
 **Features:**
@@ -125,9 +125,9 @@ Ensures that all user inputs are valid before processing the order.
 - Ensures the quantity for each candy type is less than 10.
 - Displays appropriate error messages for invalid inputs.
 
-## 4. Error Handling
+### 4. Error Handling
 
-### Error Handling
+#### Error Handling
 Both applications include error handling mechanisms to manage issues like invalid input, socket communication errors, and database connection failures.
 
 **Customer Application:**
@@ -149,8 +149,8 @@ Both applications include error handling mechanisms to manage issues like invali
 
 ---
 
-## Database
-#### Database Name : meriahcandy
+## 6. Database
+### Database Name : meriahcandy
 - **Description**: The table is designed to track customer orders, detailing what they ordered and the associated quantities and costs.
 - **Table Name** : `pesanan`
 - **SQL** :
