@@ -124,7 +124,7 @@ Both applications include error handling mechanisms to manage issues like invali
 
 
 
-
+---
 
 ## Database
 #### Database Name : meriahcandy
