@@ -1,6 +1,6 @@
 # Project Name
 Distributed Meriah Candy Shop system
----
+-----
 ## Applications Involved
 ## Description
 How many apps involved (anis)
