@@ -33,7 +33,7 @@ Architecture/Layer diagram for each of the apps including the middleware (aziah)
 
 ---
 
-## Contributing URL Endpoints Middleware RESTful/SOAP/Socket Endpoints
+## Contributing URL Endpoints Middleware RESTful/Socket 
 List of URL end points middleware RESTful/SOAP/Socket (sama2)
 
 - **RESTful Endpoints**:
