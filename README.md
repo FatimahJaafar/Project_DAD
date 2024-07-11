@@ -51,31 +51,67 @@ List of URL end points middleware RESTful/SOAP/Socket (sama2)
 - **Description**: Explanation of the middleware and its role in connecting the applications.
 Functions/Features in the middleware
 ## Middleware Components
+## 1. Socket Communication
 
-### Socket Communication
-- **Customer Application**: 
-  - Sends order data to the Owner application via a socket connection.
-  - Data format: `NameCust;Bento_Quantity;Gum_Quantity;Mom_Quantity;Hitto_Quantity;Total`.
-- **Owner Application**: 
-  - Listens for incoming connections from the Customer application on port 88.
-  - Receives, parses, and processes order data.
+### Customer to Owner Communication
+The Customer application sends order details to the Owner application via socket communication.
 
-### HTTP Requests
-- **Owner Application**:
-  - Sends order data to the `orders.php` script to save the order in the database.
-  - Constructs an HTTP GET request with order data as query parameters.
-- **OrderHistoryView**:
-  - Fetches order history data from the `view_orders.php` script.
-  - Constructs an HTTP GET request and parses the JSON response.
+**Implementation:**
+- **Customer Application:**
+  - A socket connection is established to the server (Owner) at IP address `25.6.15.15` on port `88`.
+  - The order data, including customer name and candy quantities, is sent through this socket connection.
+- **Owner Server:**
+  - The Owner application runs a server socket to receive orders from customers.
+  - A server socket listens on port `88` for incoming connections.
+  - Upon receiving an order, the server processes the data and updates the order table in the Owner application's GUI.
 
-### PHP Scripts
-- **orders.php**:
-  - Receives order data via HTTP GET requests.
-  - Validates and inserts the order data into the `pesanan` table in the MySQL database.
-  - Returns a success or error message in JSON format.
-- **view_orders.php**:
-  - Retrieves order history data from the `pesanan` table.
+## 2. HTTP Requests
+
+### Saving Orders to Database
+The middleware facilitates saving order details to a MySQL database through HTTP GET requests.
+
+**Implementation:**
+- **Owner Application:**
+  - Upon receiving an order, an HTTP GET request is sent to a PHP script (`orders.php`) hosted on the server.
+  - The PHP script processes the request and inserts the order data into the database.
+
+- **PHP Script (orders.php):**
+  - Connects to the MySQL database.
+  - Inserts the order details into the `pesanan` table.
+  - Returns a JSON response indicating success or failure.
+
+### Order History View
+The Owner application includes a feature to view the order history.
+
+**Implementation:**
+- A separate GUI window (`OrderHistoryView`) is provided to display the order history.
+- Fetches order data from the database via an HTTP GET request to another PHP script (`view_orders.php`).
+
+- **PHP Script (view_orders.php):**
+  - Retrieves all orders from the `pesanan` table.
   - Returns the order data in JSON format.
+  - The `OrderHistoryView` parses this JSON data and updates the table to display all past orders.
+
+## 3. Data Validation
+
+### Input Validation in Customer Application
+Ensures that all user inputs are valid before processing the order.
+
+**Features:**
+- Checks if at least one candy quantity is greater than zero.
+- Ensures the quantity for each candy type is less than 10.
+- Displays appropriate error messages for invalid inputs.
+
+## 4. Error Handling
+
+### Error Handling
+Both applications include error handling mechanisms to manage issues like invalid input, socket communication errors, and database connection failures.
+
+**Customer Application:**
+- Displays error messages for invalid inputs and socket errors.
+
+**Owner Application:**
+- Handles exceptions during socket communication and HTTP requests, displaying appropriate error messages.
 
 ### Middleware Flow
 1. Customer places an order using the Customer application.
