@@ -1,5 +1,5 @@
 # Project Name
-Meriah Candy Shop
+Distributed Meriah Candy Shop system
 
 ## Applications Involved
 ## Description
