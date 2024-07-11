@@ -37,13 +37,36 @@ Architecture/Layer diagram for each of the apps including the middleware (aziah)
 List of URL end points middleware RESTful/SOAP/Socket (sama2)
 
 - **RESTful Endpoints**:
-  - `GET /api/resource`: Description of the endpoint.
-  - `POST /api/resource`: Description of the endpoint. (kita guna ni)
-  - `PUT /api/resource`: Description of the endpoint.
-  - `DELETE /api/resource`: Description of the endpoint.
-  
-- **Socket Endpoints**:
-  - `ws://example.com/socket`: Description of the endpoint.
+ ### Save Order to Database
+
+- **URL:** `http://localhost/orders.php`
+- **Method:** `GET`
+- **Parameters:**
+  - `NameCust` - Customer name
+  - `Bento_Quantity` - Quantity of Bento Milk Candy
+  - `Gum_Quantity` - Quantity of Super 88 Bubble Gum
+  - `Mom_Quantity` - Quantity of Mommom 40’s Eyeglass Candy
+  - `Hitto_Quantity` - Quantity of Hitto Chewy Candy
+  - `Total` - Total amount
+
+### View Order History
+
+- **URL:** `http://localhost/view_orders.php`
+- **Method:** `GET`
+
+## Socket Endpoint
+
+### Customer to Owner
+
+- **Socket Connection:** `Socket socket = new Socket("25.6.15.15", 88);`
+  - This socket connection is used by the Customer application to send order details to the Owner application.
+  - **Socket Endpoint:** `25.6.15.15:88`
+
+### Owner Socket Server
+
+- **ServerSocket:** `ServerSocket serverSocket = new ServerSocket(88);`
+  - This socket server listens for incoming connections from the Customer application to receive order details.
+  - **Socket Endpoint:** `localhost:88`
 
 ---
 
