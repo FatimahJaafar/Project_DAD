@@ -67,7 +67,8 @@ This application resides within the middleware layer.
 Middleware Layer:
 - Socket Communication: Enables communication between the Customer and Owner applications for transmitting order details.
 - HTTP Requests: Facilitates communication with the backend server for saving new orders and retrieving order history.
-- ![ Image 2024-07-14 at 20 00 48_464a14f0](https://github.com/user-attachments/assets/aba18efa-567d-41e8-b0dc-c699297df62d)
+-
+ ![ Image 2024-07-14 at 20 00 48_464a14f0](https://github.com/user-attachments/assets/aba18efa-567d-41e8-b0dc-c699297df62d)
 
 ---
 
