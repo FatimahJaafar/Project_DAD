@@ -183,7 +183,7 @@ Both applications include error handling mechanisms to manage issues like invali
   - NameCust: A VARCHAR column (string) of maximum length 55, storing the customer's name.
   - Bento_Quantity, Gum_Quantity, Mom_Quantity, Hitto_Quantity: These columns represent the quantities ordered for different items.
   - Total: A DOUBLE column, presumably storing the total cost or price of the order.
-## video presentation : 
+## VIDEO PRESENTATION : 
 
 ## Contact
 
