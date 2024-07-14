@@ -1,4 +1,4 @@
-package testproject;
+package meriahcandy;
 
 import java.awt.EventQueue;
 import javax.swing.*;
