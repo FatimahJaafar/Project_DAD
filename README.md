@@ -24,29 +24,29 @@ There are 4 applications involved in this project.
 
 ## 2. Installation
 Prerequisites
-Ensure you have Eclipse IDE installed.
+- Ensure you have Eclipse IDE installed.
 
-Customer owner owner Application
+Customer or owner Application
 Import the project into Eclipse:
-Open Eclipse.
-Go to File > Import > General > Existing Projects into Workspace.
-Select the Customer or owner Application project directory.
-Click Finish.
+- Open Eclipse.
+- Go to File > Import > General > Existing Projects into Workspace.
+- Select the Customer or owner Application project directory.
+- Click Finish.
 
 Run the application:
-Right-click the project in the Project Explorer.
-Select Run As > Java Application.
+- Right-click the project in the Project Explorer.
+- Select Run As > Java Application.
 
 Backend Server Application
-Set up the MySQL database:
-Create a new database and user.
-Import the provided SQL schema.
-Configure PHP scripts with database credentials.
+- Set up the MySQL database:
+- Create a new database and user.
+- Import the provided SQL schema.
+- Configure PHP scripts with database credentials.
 
 ---
 
 ## 3. Architecture/Layer Diagram
-Architecture/Layer diagram for each of the apps including the middleware (aziah)
+Architecture/Layer diagram for each of the apps including the middleware
 
 ---
 
