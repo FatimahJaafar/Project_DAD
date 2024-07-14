@@ -47,7 +47,27 @@ Backend Server Application
 
 ## 3. Architecture/Layer Diagram
 Architecture/Layer diagram for each of the apps including the middleware
+1. Customer Application:
+- Presentation Layer: User interface for entering customer information and candy quantities.
+- Business Logic Layer: Validates user input, calculates total cost, and sends order data to the middleware layer via sockets.
 
+2. Owner Application:
+- Presentation Layer: User interface for displaying new orders received from customers.
+- Business Logic Layer: Receives order data from the middleware layer, processes it and sends it to the backend server for storage using HTTP requests.
+
+3. Order History View Application:
+- Presentation Layer: User interface for displaying historical order data in a tabular format.
+- Business Logic Layer: Connects to the backend server using HTTP requests to retrieve order history data and populates the table in the UI.
+
+4. Backend Server Application:
+This application resides within the middleware layer.
+- Business Logic Layer (PHP scripts): Handles incoming HTTP requests for saving new orders and retrieves order history data. It interacts with the MySQL database to perform these operations.
+- Data Layer: The MySQL database server stores all order data.
+
+Middleware Layer:
+- Socket Communication: Enables communication between the Customer and Owner applications for transmitting order details.
+- HTTP Requests: Facilitates communication with the backend server for saving new orders and retrieving order history.
+- 
 ---
 
 ## 4. Contributing URL Endpoints Middleware RESTful/Socket 
