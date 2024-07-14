@@ -3,7 +3,6 @@ Distributed Meriah Candy Shop system
 -----
 ## 1. Applications Involved
 ## Description
-How many apps involved (anis)
 There are 4 applications involved in this project.
 ### 1. Customer Application
 - Role: Enables customers to place candy orders.
@@ -24,7 +23,25 @@ There are 4 applications involved in this project.
   ---
 
 ## 2. Installation
-Brief explanation each apps (aziah)
+Prerequisites
+Ensure you have Eclipse IDE installed.
+
+Customer owner owner Application
+Import the project into Eclipse:
+Open Eclipse.
+Go to File > Import > General > Existing Projects into Workspace.
+Select the Customer or owner Application project directory.
+Click Finish.
+
+Run the application:
+Right-click the project in the Project Explorer.
+Select Run As > Java Application.
+
+Backend Server Application
+Set up the MySQL database:
+Create a new database and user.
+Import the provided SQL schema.
+Configure PHP scripts with database credentials.
 
 ---
 
@@ -34,8 +51,6 @@ Architecture/Layer diagram for each of the apps including the middleware (aziah)
 ---
 
 ## 4. Contributing URL Endpoints Middleware RESTful/Socket 
-List of URL end points middleware RESTful/SOAP/Socket (sama2)
-
 - **RESTful Endpoints**:
  ### Save Order to Database
 
@@ -70,7 +85,7 @@ List of URL end points middleware RESTful/SOAP/Socket (sama2)
 
 ---
 
-## 5. Middleware (Aina)
+## 5. Middleware 
 - **Description**: Explanation of the middleware and its role in connecting the applications.
 Functions/Features in the middleware
 ### Middleware Components
@@ -143,9 +158,6 @@ Both applications include error handling mechanisms to manage issues like invali
 4. `orders.php` validates and stores the order in the database.
 5. Owner can view new orders in real-time, and past orders can be viewed via the OrderHistoryView.
 6. OrderHistoryView fetches order history data from `view_orders.php` and displays it.
-
-
-
 
 ---
 
